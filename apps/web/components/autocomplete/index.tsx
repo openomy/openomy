@@ -5,7 +5,7 @@ import {
   CommandItem,
   CommandList,
   CommandInput,
-} from '@repo/ui/components/ui/command';
+} from '@openomy/ui/components/ui/command';
 import { Command as CommandPrimitive } from 'cmdk';
 import {
   useState,
@@ -14,9 +14,9 @@ import {
   useEffect,
   type KeyboardEvent,
 } from 'react';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 import { CheckIcon, XIcon } from 'lucide-react';
-import { Button } from '@repo/ui/components/ui/button';
+import { Button } from '@openomy/ui/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export type Option = Record<'value' | 'label', string> & Record<string, string>;

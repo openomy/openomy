@@ -5,7 +5,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from '@repo/ui/components/ui/tabs';
+} from '@openomy/ui/components/ui/tabs';
 import { ContributorIssuesTable } from '@/components/contributor-issues/data-table';
 import { ContributorDiscussionsTable } from '@/components/contributor-discussions/data-table';
 import { ContributorPRCommentsTable } from '@/components/contributor-pr-comments/data-table';

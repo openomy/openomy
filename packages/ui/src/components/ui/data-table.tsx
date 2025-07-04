@@ -11,8 +11,8 @@ import {
   PaginationContent,
   PaginationEllipsis,
   PaginationItem,
-} from '@repo/ui/components/ui/pagination';
-import { Button } from '@repo/ui/components/ui/button';
+} from '@openomy/ui/components/ui/pagination';
+import { Button } from '@openomy/ui/components/ui/button';
 import {
   ArrowDown10,
   ArrowDownAZ,
@@ -20,7 +20,7 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from 'lucide-react';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 import {
   Table,
   TableBody,
@@ -28,8 +28,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@repo/ui/components/ui/table';
-import { cn } from '@repo/ui/lib/utils';
+} from '@openomy/ui/components/ui/table';
+import { cn } from '@openomy/ui/lib/utils';
 
 interface DataTableProps<TData> {
   table: TanstackTable<TData>;

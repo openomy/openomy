@@ -16,7 +16,7 @@
     "@react-three/drei": "^10.0.5",
     "@react-three/fiber": "^9.1.0",
     "@react-three/postprocessing": "^3.0.4",
-    "@repo/ui": "workspace:*",
+    "@openomy/ui": "workspace:*",
     "@tanstack/react-query": "^5.66.0",
     "@tanstack/react-table": "^8.20.6",
     "@vercel/analytics": "^1.5.0",

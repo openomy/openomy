@@ -5,15 +5,15 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
-import { Button } from '@repo/ui/components/ui/button';
+} from '@openomy/ui/components/ui/avatar';
+import { Button } from '@openomy/ui/components/ui/button';
 import Link from 'next/link';
 import { InfoIcon } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@repo/ui/components/ui/tooltip';
+} from '@openomy/ui/components/ui/tooltip';
 import { ScoreHint } from '@/components/repos/score-hint';
 
 export type Contributor = {

@@ -11,11 +11,11 @@
     "prefix": ""
   },
   "aliases": {
-    "components": "@repo/ui/components",
-    "utils": "@repo/ui/lib/utils",
-    "ui": "@repo/ui/components/ui",
-    "lib": "@repo/ui/lib",
-    "hooks": "@repo/ui/hooks"
+    "components": "@openomy/ui/components",
+    "utils": "@openomy/ui/lib/utils",
+    "ui": "@openomy/ui/components/ui",
+    "lib": "@openomy/ui/lib",
+    "hooks": "@openomy/ui/hooks"
   },
   "iconLibrary": "lucide"
 }

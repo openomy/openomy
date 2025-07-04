@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as MenubarPrimitive from '@radix-ui/react-menubar';
 import { CheckIcon, ChevronRightIcon, CircleIcon } from 'lucide-react';
 
-import { cn } from '@repo/ui/lib/utils';
+import { cn } from '@openomy/ui/lib/utils';
 
 function Menubar({
   className,

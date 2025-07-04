@@ -5,7 +5,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
+} from '@openomy/ui/components/ui/avatar';
 import { ImageIcon } from 'lucide-react';
 
 export function RepoHeader({ owner, repo }: { owner: string; repo: string }) {

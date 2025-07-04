@@ -1,4 +1,4 @@
-import { Badge } from '@repo/ui/components/ui/badge';
+import { Badge } from '@openomy/ui/components/ui/badge';
 
 export function Labels({ labels }: { labels: string[] }) {
   return (

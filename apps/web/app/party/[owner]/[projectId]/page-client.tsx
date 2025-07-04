@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@repo/ui/components/ui/card';
+} from '@openomy/ui/components/ui/card';
 import { PartyPoster } from './party-poster';
 import { PartyContributorsTable } from './data-table';
 import { PartyOverview, type PartyData } from './party-overview';

@@ -4,7 +4,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
+} from '@openomy/ui/components/ui/avatar';
 import type { NextFontWithVariable } from 'next/dist/compiled/@next/font/dist/types';
 import { motion } from 'framer-motion';
 import { GitHubLogoIcon, StarFilledIcon } from '@radix-ui/react-icons';

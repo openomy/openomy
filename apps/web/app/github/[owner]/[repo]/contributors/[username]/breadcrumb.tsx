@@ -8,7 +8,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@repo/ui/components/ui/breadcrumb';
+} from '@openomy/ui/components/ui/breadcrumb';
 import { useParams } from 'next/navigation';
 
 export function PageBreadcrumb() {

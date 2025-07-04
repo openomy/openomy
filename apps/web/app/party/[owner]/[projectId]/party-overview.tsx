@@ -5,11 +5,11 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from '@repo/ui/components/ui/card';
+} from '@openomy/ui/components/ui/card';
 import { useMemo } from 'react';
 import { CalendarDaysIcon, UsersIcon } from 'lucide-react';
-import { Progress } from '@repo/ui/components/ui/progress';
-import { Badge } from '@repo/ui/components/ui/badge';
+import { Progress } from '@openomy/ui/components/ui/progress';
+import { Badge } from '@openomy/ui/components/ui/badge';
 import { dayjs } from '@/utils/dayjs';
 import { cn } from '@/lib/utils';
 

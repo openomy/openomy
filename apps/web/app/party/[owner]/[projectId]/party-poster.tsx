@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 
 export function PartyPoster({

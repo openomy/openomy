@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '@repo/ui/components/ui/button';
-import { Separator } from '@repo/ui/components/ui/separator';
+import { Button } from '@openomy/ui/components/ui/button';
+import { Separator } from '@openomy/ui/components/ui/separator';
 import Image from 'next/image';
 
 export function Footer() {

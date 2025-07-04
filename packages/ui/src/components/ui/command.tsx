@@ -4,14 +4,14 @@ import * as React from 'react';
 import { Command as CommandPrimitive } from 'cmdk';
 import { SearchIcon } from 'lucide-react';
 
-import { cn } from '@repo/ui/lib/utils';
+import { cn } from '@openomy/ui/lib/utils';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@repo/ui/components/ui/dialog';
+} from '@openomy/ui/components/ui/dialog';
 
 function Command({
   className,

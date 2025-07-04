@@ -10,7 +10,7 @@ import {
   useReactTable,
   type PaginationState,
 } from '@tanstack/react-table';
-import { DataTable } from '@repo/ui/components/ui/data-table';
+import { DataTable } from '@openomy/ui/components/ui/data-table';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import { useColumns } from './columns';
 

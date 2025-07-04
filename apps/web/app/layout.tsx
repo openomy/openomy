@@ -3,8 +3,8 @@ import { Geist } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { QueryProvider } from '@/providers/query-provider';
 import ThemeProvider from '@/providers/theme-provider';
-import { TooltipProvider } from '@repo/ui/components/ui/tooltip';
-import { Toaster } from '@repo/ui/components/ui/sonner';
+import { TooltipProvider } from '@openomy/ui/components/ui/tooltip';
+import { Toaster } from '@openomy/ui/components/ui/sonner';
 import { cn } from '@/lib/utils';
 import './globals.css';
 

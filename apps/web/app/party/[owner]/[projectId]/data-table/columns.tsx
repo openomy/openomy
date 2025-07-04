@@ -2,21 +2,21 @@
 
 import { ColumnDef } from '@tanstack/react-table';
 import { cn } from '@/lib/utils';
-import { Progress } from '@repo/ui/components/ui/progress';
+import { Progress } from '@openomy/ui/components/ui/progress';
 import { type AntvOscpData, AntvOscpTask } from '@/types/oscp';
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
+} from '@openomy/ui/components/ui/avatar';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@repo/ui/components/ui/popover';
-import { Button } from '@repo/ui/components/ui/button';
+} from '@openomy/ui/components/ui/popover';
+import { Button } from '@openomy/ui/components/ui/button';
 import Link from 'next/link';
-import { Badge } from '@repo/ui/components/ui/badge';
+import { Badge } from '@openomy/ui/components/ui/badge';
 import { useMemo } from 'react';
 import { CheckIcon, EllipsisIcon } from 'lucide-react';
 

@@ -6,13 +6,13 @@ import { CalendarIcon } from 'lucide-react';
 import { DateRange } from 'react-day-picker';
 import { XIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button, buttonVariants } from '@repo/ui/components/ui/button';
+import { Button, buttonVariants } from '@openomy/ui/components/ui/button';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@repo/ui/components/ui/popover';
-import { MonthRangePicker as MonthRangePickerUI } from '@repo/ui/components/ui/month-range-picker';
+} from '@openomy/ui/components/ui/popover';
+import { MonthRangePicker as MonthRangePickerUI } from '@openomy/ui/components/ui/month-range-picker';
 
 interface DatePickerWithRangeProps {
   value?: DateRange | undefined | null;

@@ -18,7 +18,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@repo/ui/components/ui/tooltip';
+} from '@openomy/ui/components/ui/tooltip';
 import { MoreSupportedProjects } from './MoreSupportedProjects';
 
 export interface LogoInfo {

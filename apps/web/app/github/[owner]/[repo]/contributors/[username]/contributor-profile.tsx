@@ -4,7 +4,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
+} from '@openomy/ui/components/ui/avatar';
 import { useGithubUser } from '@/hooks/use-github-user';
 import { formatNumber } from '@/lib/utils';
 import { UsersIcon } from 'lucide-react';
@@ -14,7 +14,7 @@ import { PRIcon } from '@/components/icons/pr';
 import { IssueIcon } from '@/components/icons/issue';
 import { DiscussionIcon } from '@/components/icons/discussion';
 import { cn } from '@/lib/utils';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 
 export function ContributorProfile({
   owner,

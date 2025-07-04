@@ -5,7 +5,7 @@ import {
   Avatar,
   AvatarFallback,
   AvatarImage,
-} from '@repo/ui/components/ui/avatar';
+} from '@openomy/ui/components/ui/avatar';
 import { GithubStarButton } from './github-star-button';
 import type { NextFontWithVariable } from 'next/dist/compiled/@next/font/dist/types';
 import { cn } from '@/lib/utils';

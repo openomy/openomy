@@ -1,1 +1,1 @@
-export * from '@repo/ui/lib/utils';
+export * from '@openomy/ui/lib/utils';

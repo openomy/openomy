@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2Icon as LoaderIcon, CheckCircle2Icon } from 'lucide-react';
-import { Input } from '@repo/ui/components/ui/input';
-import { Button } from '@repo/ui/components/ui/button';
+import { Input } from '@openomy/ui/components/ui/input';
+import { Button } from '@openomy/ui/components/ui/button';
 import { toast } from 'sonner';
 import { cn } from '@/lib/utils';
 import {
@@ -16,7 +16,7 @@ import {
   FormField,
   FormItem,
   FormMessage,
-} from '@repo/ui/components/ui/form';
+} from '@openomy/ui/components/ui/form';
 import { z } from 'zod';
 import { WaitlistSchema } from '@/lib/schema';
 

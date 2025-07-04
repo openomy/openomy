@@ -10,9 +10,9 @@ import {
   useReactTable,
   type PaginationState,
 } from '@tanstack/react-table';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
-import { DataTable } from '@repo/ui/components/ui/data-table';
+import { DataTable } from '@openomy/ui/components/ui/data-table';
 import { buildColumns } from './columns';
 import { UserSearchInput } from '@/components/user-search-input';
 import { type DateRange } from 'react-day-picker';

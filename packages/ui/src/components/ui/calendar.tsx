@@ -4,8 +4,8 @@ import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
 
-import { cn } from '@repo/ui/lib/utils';
-import { buttonVariants } from '@repo/ui/components/ui/button';
+import { cn } from '@openomy/ui/lib/utils';
+import { buttonVariants } from '@openomy/ui/components/ui/button';
 
 function Calendar({
   className,

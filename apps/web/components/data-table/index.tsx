@@ -8,7 +8,7 @@ import {
 } from '@tanstack/react-table';
 import { DataTablePagination } from './pagination';
 import { ArrowDown10, ArrowDownAZ, ArrowUp01 } from 'lucide-react';
-import { Skeleton } from '@repo/ui/components/ui/skeleton';
+import { Skeleton } from '@openomy/ui/components/ui/skeleton';
 import {
   Table,
   TableBody,
@@ -16,7 +16,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@repo/ui/components/ui/table';
+} from '@openomy/ui/components/ui/table';
 
 interface DataTableProps<TData> {
   table: TanstackTable<TData>;
