@@ -4,89 +4,196 @@
 
 # Openomy
 
-Providing Open-Source Economic solutions with blockchain and AI<br/>
-Code is no longer just behind the product — it <em>is</em> the product.<br/>
+Providing open-source economic solutions with blockchain and AI.  
+Code is no longer just behind the product — it *is* the product.
+
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/openomy/openomy?utm_source=oss&utm_medium=github&utm_campaign=openomy%2Fopenomy&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 [![][vision-banner]][homepage-link]
 
-<div align="left">
+</div>
 
-## ✨ Feature
+---
 
-### 1. Contributor chart from a different perspective
+## ✨ Features
 
-Compared to a simple contributor chart, a true contributor list should include more, PR, issue, discussion, and even a small comment, and should not be measured only by code submission. These are all manifestations of community activity! They should all be seen! Therefore, we designed and developed a variety of contributor charts / widgets
+### Contributor charts from a fresh perspective
+Traditional contributor charts focus only on commits.  
+We believe every form of participation—PRs, issues, discussions, even a single comment—deserves recognition.  
+That's why we designed multiple contributor charts / widgets to capture the full spectrum of community activity.
 
-[![][widget-banner]][homepage-link]
+> Try it out:  
+> `https://www.openomy.com/<owner>/<repo>`  
+> *(Replace `<owner>/<repo>` with your repository path, or simply swap `github` → `openomy` in the URL).*
 
-If your project also wants to access our chart, you can visit http://openomy.com/lobehub/lobe-chat (replace the lobehub/lobe-chat path with your repository path)
-Or directly in your github repository, replace `github` with `openomy`
+### Complete repository activity overview
+Whether you are a core contributor or just enjoy engaging in issues, all your interactions are visible here—including every little like.  
 
-### 2. All activities in the open source repository
+> A brand-new project-level statistics page is coming soon.
 
-Whether you are an important contributor to the project or just like to participate in issues and discussions, you can see all the activities here, even a small like from others.
+### Unique personal profile *(WIP)*
+Every bit of support in the GitHub community should be highlighted.  
+We are crafting a dedicated personal page—stay tuned for the upcoming design!
 
-> A new project-level statistics page will be launched soon
+---
 
-[![][activites-showcase]][ant-design-openomy]
+## 🚧 Roadmap
 
-### 3. Unique personal details page「Still in progress」
+- [ ] Unique personal profile page  
+  - [ ] In design  
+- [ ] General statistics for events such as parties / hackathons
+- [ ] Combine AI & blockchain for enhanced data analytics
+- [ ] Chart SDK: deeper & richer customization  
+- [ ] Data SDK: more flexible analysis capabilities 
 
-As a GitHub community user, every little support should be counted and seen, so we designed a special personal page.
-
-> New design draft is on the way, please stay tuned
-
-### Progress / Doing
-
-- [ ] Combine AI and blockchain to make better data statistics
-- [ ] Unique personal display page
-  - [ ] Designing
-- [ ] Chart SDK supports deeper and richer customization capabilities
-- [ ] Data SDK supports more free data analysis
-- [ ] General data statistics support for various activities such as party activities/hackathons
+---
 
 ## 🤝 Supported Projects
 
-Thanks to all the github community who supported and accessed our charts.
+Thanks to all community projects already using our charts ❤
 
-- https://github.com/ant-design/ant-design
-- https://github.com/lobehub/lobe-chat
-- https://github.com/flipped-aurora/gin-vue-admin
-- https://github.com/element-plus/element-plus
-- https://github.com/antvis/G2
-- https://github.com/antvis/G6
-- https://github.com/ant-design/x
-- https://github.com/Tencent/tdesign-react
-- https://github.com/Tencent/tdesign-miniprogram
-- https://github.com/Tencent/tdesign-mobile-react
-- https://github.com/wzc520pyfm/ant-design-x-vue
-- https://github.com/ant-design/ant-design-web3
-- https://github.com/YunYouJun/valaxy
-- https://github.com/shuimo-design/shuimo-ui
-- https://github.com/jzero-io/jzero
+<div align="center">
+  <table border="0" cellpadding="0" cellspacing="16" style="border-collapse: separate; border-spacing: 16px; margin: auto;">
+    <tbody>
+      <tr>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/ant-design/ant-design" title="Ant Design" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/antd-logo.png" width="80" alt="Ant Design" style="margin-bottom: 12px;" />
+            <br/>
+            <small>ant-design</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/ant-design/x" title="Ant Design X" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/ant-design-x-logo.svg" width="80" alt="Ant Design X" style="margin-bottom: 12px;" />
+            <br/>
+            <small>ant-design&nbsp;x</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/wzc520pyfm/ant-design-x-vue" title="Ant Design X Vue" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/antd-logo.png" width="80" alt="Ant Design X Vue (fallback)" style="margin-bottom: 12px;" />
+            <br/>
+            <small>ant-design-x-vue</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/ant-design/ant-design-web3" title="Ant Design Web3" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/ant-design-web3-logo.svg" width="80" alt="Ant Design Web3" style="margin-bottom: 12px;" />
+            <br/>
+            <small>ant-design-web3</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/antvis/G2" title="AntV G2" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/antvis-logo.png" width="80" alt="AntV G2" style="margin-bottom: 12px;" />
+            <br/>
+            <small>AntV&nbsp;G2</small>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/antvis/G6" title="AntV G6" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/antvis-logo.png" width="80" alt="AntV G6" style="margin-bottom: 12px;" />
+            <br/>
+            <small>AntV&nbsp;G6</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/element-plus/element-plus" title="Element Plus" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/element-plus-logo.png" width="80" alt="Element Plus" style="margin-bottom: 12px;" />
+            <br/>
+            <small>element-plus</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/flipped-aurora/gin-vue-admin" title="Gin Vue Admin" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/gin-vue-admin-logo.png" width="80" alt="Gin Vue Admin" style="margin-bottom: 12px;" />
+            <br/>
+            <small>gin-vue-admin</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/jzero-io/jzero" title="JZero" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/jzero.png" width="80" alt="JZero" style="margin-bottom: 12px;" />
+            <br/>
+            <small>jzero</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/lobehub/lobe-chat" title="Lobe Chat" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/lobe-logo.png" width="80" alt="Lobe Chat" style="margin-bottom: 12px;" />
+            <br/>
+            <small>lobe-chat</small>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/umijs/mako" title="Mako" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/mako.png" width="80" alt="Mako" style="margin-bottom: 12px;" />
+            <br/>
+            <small>Mako</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/shuimo-design/shuimo-ui" title="Shuimo UI" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/shuimo-ui-logo.svg" width="80" alt="Shuimo UI" />
+            <br/>
+            <small>shuimo-ui</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/Tencent/tdesign-miniprogram" title="TDesign MiniProgram" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/tencent.png" width="80" alt="TDesign MiniProgram" style="margin-bottom: 12px;" />
+            <br/>
+            <small>tdesign-miniprogram</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/Tencent/tdesign-react" title="TDesign React" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/tencent.png" width="80" alt="TDesign React" style="margin-bottom: 12px;" />
+            <br/>
+            <small>tdesign-react</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/YunYouJun/valaxy" title="Valaxy" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/valaxy-logo.svg" width="80" alt="Valaxy" style="margin-bottom: 12px;" />
+            <br/>
+            <small>valaxy</small>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
-## 🤝 Contributing
+---
 
-Contributions of all types are more than welcome; if you are interested in contributing code, feel free to check out our GitHub Issues and Discussion to get stuck in to show us what you're made of.
+## 🙌 Contributing
 
-> \[!TIP]
->
-> We are creating a technology-driven forum, fostering knowledge interaction and the exchange of ideas that may culminate in mutual inspiration and collaborative innovation.
->
-> Help us make Openomy better. Welcome to provide product design feedback, user experience discussions directly to us.
->
+We welcome contributions of **all** kinds.
+Check our GitHub Issues and Discussions to get started.
 
+> \[!TIP]  
+> We are building a tech-driven forum to foster knowledge exchange, mutual inspiration, and collaborative innovation.  
+> Your feedback on product design and user experience is invaluable—join the conversation!
 
-## Contact Us
+---
 
-- Email: hello@openomy.app / openomy.com@gmail.com
-- Twitter/x: https://x.com/openomy_hub
+## 📮 Contact
 
-Copyright © 2025 [Openomy][profile-link]. <br />
-This project is [Apache 2.0](./LICENSE) licensed.
+- **Email**: <hello@openomy.app> / <openomy.com@gmail.com>
+- **X (Twitter)**: [@openomy_hub](https://x.com/openomy_hub)
+
+---
+
+© 2025 [Openomy][profile-link] • Licensed under [Apache 2.0](./LICENSE)
 
 [homepage-link]: https://www.openomy.com/
-[image-banner]: https://github.com/user-attachments/assets/5808d40d-74ab-4a7c-a7bd-653eca48b392
+[image-banner]: https://github.com/user-attachments/assets/5808d60d-74ab-4a7c-a7bd-653eca48b392
 [widget-banner]: https://github.com/user-attachments/assets/a757ed9f-a4b3-4b88-a3cd-03979311556f
 
 [vision-banner]: https://github.com/user-attachments/assets/a47fc0a7-de76-41b1-83d9-ec935fba050d
