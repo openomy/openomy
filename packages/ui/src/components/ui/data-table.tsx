@@ -14,6 +14,13 @@ import {
 } from '@openomy/ui/components/ui/pagination';
 import { Button } from '@openomy/ui/components/ui/button';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@openomy/ui/components/ui/select';
+import {
   ArrowDown10,
   ArrowDownAZ,
   ArrowUp01,
@@ -52,7 +59,6 @@ export function DataTable<TData>({
   skeletonHeight = 24,
   renderSkeleton,
 }: DataTableProps<TData>) {
-  // 创建加载时的行数组
   const loadingRows = Array.from({ length: loadingRowCount }, (_, index) => (
     <TableRow key={`loading-${index}`}>
       {table.getVisibleLeafColumns().map((col, cellIndex) => (
@@ -67,7 +73,6 @@ export function DataTable<TData>({
     </TableRow>
   ));
 
-  // 自定义排序图标
   const getSortIcon = (isSorted: string | false, headerName?: string) => {
     const className = `${
       isSorted !== false ? 'text-blue-500' : 'font-bold'
@@ -194,7 +199,7 @@ export function DataTablePagination<TData>({
         items.push(
           <PaginationItem key={i}>
             <Button
-              className={cn('h-8 w-8')}
+              className={cn('h-8 min-w-8 px-2')}
               variant={page === i ? 'outline' : 'ghost'}
               onClick={() => table.setPageIndex(i - 1)}
             >
@@ -207,7 +212,7 @@ export function DataTablePagination<TData>({
       items.push(
         <PaginationItem key={1}>
           <Button
-            className={cn('h-8 w-8')}
+            className={cn('h-8 min-w-8 px-2')}
             variant={page === 1 ? 'outline' : 'ghost'}
             onClick={() => table.setPageIndex(0)}
           >
@@ -231,7 +236,7 @@ export function DataTablePagination<TData>({
         items.push(
           <PaginationItem key={i}>
             <Button
-              className={cn('h-8 w-8')}
+              className={cn('h-8 min-w-8 px-2')}
               variant={page === i ? 'outline' : 'ghost'}
               onClick={() => table.setPageIndex(i - 1)}
             >
@@ -252,7 +257,7 @@ export function DataTablePagination<TData>({
       items.push(
         <PaginationItem key={totalPageCount}>
           <Button
-            className={cn('h-8 w-8')}
+            className={cn('h-8 min-w-8 px-2')}
             variant={page === totalPageCount ? 'outline' : 'ghost'}
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
           >
@@ -267,31 +272,50 @@ export function DataTablePagination<TData>({
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-3 w-full">
-      <div className="hidden md:flex items-center whitespace-nowrap text-sm text-[rgba(255,255,255,0.37)]">
-        Total {table.getRowCount()} items
+      <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center whitespace-nowrap text-sm text-[rgba(255,255,255,0.37)]">
+          Total {table.getRowCount()} items
+        </div>
+        <div className="flex items-center gap-2">
+          <Select
+            value={`${table.getState().pagination.pageSize}`}
+            onValueChange={(value) => {
+              table.setPageSize(Number(value));
+            }}
+          >
+            <SelectTrigger size="sm" className="w-[70px]">
+              <SelectValue placeholder={table.getState().pagination.pageSize} />
+            </SelectTrigger>
+            <SelectContent className="min-w-[70px]">
+              {[10, 20, 30].map((pageSize) => (
+                <SelectItem key={pageSize} value={`${pageSize}`}>
+                  {pageSize}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </div>
-      <Pagination className="md:justify-end">
+      <Pagination className="flex-1 md:justify-end">
         <PaginationContent className="max-sm:gap-0">
           <PaginationItem>
             <Button
               variant="ghost"
-              className="h-8 p-0"
+              className="h-8 w-8"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
               <ChevronLeftIcon />
-              <span className="hidden sm:block">Previous</span>
             </Button>
           </PaginationItem>
           {renderPageNumbers()}
           <PaginationItem>
             <Button
               variant="ghost"
-              className="h-8 p-0"
+              className="h-8 w-8"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
-              <span className="hidden sm:block">Next</span>
               <ChevronRightIcon />
             </Button>
           </PaginationItem>
