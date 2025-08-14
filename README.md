@@ -166,6 +166,15 @@ Thanks to all community projects already using our charts ❤
           </a>
         </td>
       </tr>
+      <tr>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/element-plus-x/Element-Plus-X" title="Element-Plus-X" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/vue-element-plus-x.png" width="80" alt="Element-Plus-X" style="margin-bottom: 12px;" />
+            <br/>
+            <small>Element-Plus-X</small>
+          </a>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
