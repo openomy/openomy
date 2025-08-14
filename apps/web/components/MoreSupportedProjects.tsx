@@ -73,6 +73,12 @@ const repoList: RepoItem[] = [
     defaultStarCount: '102',
     logoUrl: '/images/jzero-logo.jpeg',
   },
+  {
+    repoName: 'Element-Plus-X',
+    repoPath: 'element-plus-x/Element-Plus-X',
+    defaultStarCount: '929',
+    logoUrl: '/images/vue-element-plus-x.png',
+  },
 ];
 
 export function MoreSupportedProjects({
