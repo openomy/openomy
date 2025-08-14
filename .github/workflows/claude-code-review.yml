@@ -1,8 +1,10 @@
 name: Claude Code Review
 
 on:
-  pull_request:
-    types: [opened, synchronize]
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+    # NOTE: pull_request_target runs the workflow from the default branch,
+    # which satisfies GitHub's "workflow must be identical to default branch" validation.
     # Optional: Only run on specific file changes
     # paths:
     #   - "src/**/*.ts"
@@ -37,9 +39,9 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-          # Optional: Specify model (defaults to Claude Sonnet 4, uncomment for Claude Opus 4)
-          # model: "claude-opus-4-20250514"
-          
+          # Optional: Specify model (defaults to Claude Sonnet 4, uncomment for Claude Opus 4.1)
+          # model: "claude-opus-4-1-20250805"
+
           # Direct prompt for automated review (no @claude mention needed)
           direct_prompt: |
             Please review this pull request and provide feedback on:
