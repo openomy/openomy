@@ -3,7 +3,7 @@
 import { RepoContributorsDataTable } from '@/components/repo-contributors/data-table';
 import { useParams } from 'next/navigation';
 import { ReadmeWidgets } from './readme-widgets';
-import { Waitlist } from '@/components/waitlist';
+import { EmbeddableLinks } from './embeddable-links';
 import { Footer } from '@/components/footer';
 import { RepoHeader } from '@/components/repos/header';
 
@@ -17,7 +17,7 @@ export function RepoPageClient() {
           <RepoHeader owner={owner} repo={repo} />
         </div>
 
-        <Waitlist className="" backFillRepoUrl={false} />
+        <EmbeddableLinks owner={owner} repo={repo} />
         <ReadmeWidgets owner={owner} repo={repo} className="" />
 
         <RepoContributorsDataTable owner={owner} repo={repo} />
