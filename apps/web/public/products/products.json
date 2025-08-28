@@ -7,9 +7,7 @@
       "description": "Enterprise-class UI design language and React UI library with high-quality components for building rich, interactive user interfaces.",
       "image": {
         "src": "/products/ant-design/antd-product.png",
-        "alt": "Ant Design",
-        "width": 800,
-        "height": 600
+        "alt": "Ant Design"
       },
       "category": "ui-framework",
       "links": {
@@ -25,9 +23,7 @@
       "description": "Open-source modern design AI chat framework supporting multiple AI providers, knowledge base, and one-click deployment of private AI agents.",
       "image": {
         "src": "/products/lobe-chat/lobe-product.png", 
-        "alt": "Lobe Chat",
-        "width": 800,
-        "height": 600
+        "alt": "Lobe Chat"
       },
       "category": "ai-tools",
       "links": {
