@@ -14,7 +14,14 @@
         "website": "https://ant.design",
         "github": "https://github.com/ant-design/ant-design"
       },
-      "tags": ["react", "ui-library", "components", "enterprise", "typescript", "design-system"]
+      "tags": [
+        "react",
+        "ui-library",
+        "components",
+        "enterprise",
+        "typescript",
+        "design-system"
+      ]
     },
     {
       "id": "lobe-chat",
@@ -22,7 +29,7 @@
       "label": "AI Chat",
       "description": "Open-source modern design AI chat framework supporting multiple AI providers, knowledge base, and one-click deployment of private AI agents.",
       "image": {
-        "src": "/products/lobe-chat/lobe-product.png", 
+        "src": "/products/lobe-chat/lobe-product.png",
         "alt": "Lobe Chat"
       },
       "category": "ai-tools",
@@ -30,7 +37,41 @@
         "website": "https://lobechat.com",
         "github": "https://github.com/lobehub/lobe-chat"
       },
-      "tags": ["ai", "chatbot", "open-source", "claude", "openai", "multimodal", "tts", "rag"]
+      "tags": [
+        "ai",
+        "chatbot",
+        "open-source",
+        "claude",
+        "openai",
+        "multimodal",
+        "tts",
+        "rag"
+      ]
+    },
+    {
+      "id": "locallytools",
+      "productName": "LocallyTools",
+      "label": "Productivity",
+      "description": "A free browser tools for Images, PDFs & Devs. 100% local processing, no signup, no uploads, supports offline use.",
+      "image": {
+        "src": "/products/locallytools/locallytools-product.png",
+        "alt": "LocallyTools"
+      },
+      "category": "dev-tools",
+      "links": {
+        "website": "https://locallytools.com"
+      },
+      "tags": [
+        "productivity",
+        "image-tools",
+        "pdf-tools",
+        "dev-tools",
+        "design-tools"
+      ],
+      "contributor": {
+        "githubUsername": "sukechris",
+        "addedDate": "2025-08-29"
+      }
     }
   ]
 }
