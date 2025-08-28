@@ -20,6 +20,9 @@ export default function middleware(request: NextRequest) {
       return NextResponse.next();
     }
     // 没有匹配的话，走路由重写逻辑，将 /svg -> 重写为 /github/svg
+  } else if (pathname.startsWith('/openexpo')) {
+    // 保护 /openexpo 页面（含潜在子路由）
+    return NextResponse.next();
   } else if (pathname === '/') {
     // 额外保护以下路由：
     // 1. "/": 首页
@@ -51,8 +54,9 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - /images (public/images/* files)
+     * - /products (public/products/* files)
      * - favicon.ico (favicon file)
      */
-    '/((?!api|_next|_vercel|images|favicon.ico).*)',
+    '/((?!api|_next|_vercel|images|products|favicon.ico).*)',
   ],
 };

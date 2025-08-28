@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
+import { Geist, Bricolage_Grotesque } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import { QueryProvider } from '@/providers/query-provider';
 import ThemeProvider from '@/providers/theme-provider';
@@ -11,6 +11,12 @@ import './globals.css';
 const geist = Geist({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-bricolage',
 });
 
 // 定义 metadata
@@ -36,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('antialiased', geist.className)}>
+      <body className={cn('antialiased', geist.className, bricolage.variable)}>
         <ThemeProvider>
           <TooltipProvider delayDuration={100} skipDelayDuration={200}>
             <QueryProvider>{children}</QueryProvider>

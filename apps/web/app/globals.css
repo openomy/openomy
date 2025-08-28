@@ -2,3 +2,10 @@
 @import '@openomy/ui/globals.css';
 @source "../app/**/*.{ts,tsx}";
 @source "../../../packages/ui/**/*.{ts,tsx}";
+
+@layer utilities {
+  .font-bricolage {
+    font-family: var(--font-bricolage), sans-serif;
+  }
+}
+

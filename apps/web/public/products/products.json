@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "ant-design",
+      "productName": "Ant Design",
+      "label": "UI Framework",
+      "description": "Enterprise-class UI design language and React UI library with high-quality components for building rich, interactive user interfaces.",
+      "image": {
+        "src": "/products/ant-design/antd-product.png",
+        "alt": "Ant Design",
+        "width": 800,
+        "height": 600
+      },
+      "category": "ui-framework",
+      "links": {
+        "website": "https://ant.design",
+        "github": "https://github.com/ant-design/ant-design"
+      },
+      "tags": ["react", "ui-library", "components", "enterprise", "typescript", "design-system"]
+    },
+    {
+      "id": "lobe-chat",
+      "productName": "Lobe Chat",
+      "label": "AI Chat",
+      "description": "Open-source modern design AI chat framework supporting multiple AI providers, knowledge base, and one-click deployment of private AI agents.",
+      "image": {
+        "src": "/products/lobe-chat/lobe-product.png", 
+        "alt": "Lobe Chat",
+        "width": 800,
+        "height": 600
+      },
+      "category": "ai-tools",
+      "links": {
+        "website": "https://lobechat.com",
+        "github": "https://github.com/lobehub/lobe-chat"
+      },
+      "tags": ["ai", "chatbot", "open-source", "claude", "openai", "multimodal", "tts", "rag"]
+    }
+  ]
+}
