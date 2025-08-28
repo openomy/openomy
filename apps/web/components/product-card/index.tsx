@@ -40,7 +40,7 @@ export const Product = ({
       transition={{ duration: 0.3 }}
       onClick={onClick}
     >
-      <div className="relative aspect-video w-full overflow-hidden bg-gradient-to-br from-gray-800/20 to-gray-900/30">
+      <div className="relative aspect-[2/1] w-full overflow-hidden bg-gradient-to-br from-gray-800/20 to-gray-900/30">
         <Image
           src={image.src}
           alt={image.alt}
