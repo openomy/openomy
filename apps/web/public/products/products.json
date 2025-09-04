@@ -72,6 +72,31 @@
         "githubUsername": "sukechris",
         "addedDate": "2025-08-29"
       }
+    },
+    {
+      "id": "deepchat",
+      "productName": "DeepChat",
+      "label": "AI Chat",
+      "description": "The powerful open-source AI chat platform providing a unified interface for interacting with various large language models and agents. Making AI capabilities more accessible and efficient.",
+      "image": {
+        "src": "/products/deepchat/deepchat-product.png",
+        "alt": "DeepChat"
+      },
+      "category": "ai-tools",
+      "links": {
+        "website": "https://deepchatai.cn/",
+        "github": "https://github.com/thinkinaixyz/deepchat"
+      },
+      "tags": [
+        "vue",
+        "chatbot",
+        "agent",
+        "open-source",
+        "ai",
+        "multimodal",
+        "electron",
+        "desktop"
+      ]
     }
   ]
 }
