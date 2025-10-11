@@ -79,6 +79,12 @@ const repoList: RepoItem[] = [
     defaultStarCount: '929',
     logoUrl: '/images/vue-element-plus-x.png',
   },
+  {
+    repoName: 'vue-vben-admin',
+    repoPath: '/vbenjs/vue-vben-admin',
+    defaultStarCount: '30.2k',
+    logoUrl: '/images/vue-vben-admin-logo.webp',
+  },
 ];
 
 export function MoreSupportedProjects({

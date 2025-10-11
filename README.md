@@ -174,6 +174,13 @@ Thanks to all community projects already using our charts ❤
             <small>Element-Plus-X</small>
           </a>
         </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/vbenjs/vue-vben-admin" title="vue-vben-admin" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/vue-vben-admin-logo.webp" width="80" alt="vue-vben-admin" style="margin-bottom: 12px;" />
+            <br/>
+            <small>vue-vben-admin</small>
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
