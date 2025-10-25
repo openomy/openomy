@@ -85,6 +85,12 @@ const repoList: RepoItem[] = [
     defaultStarCount: '30.2k',
     logoUrl: '/images/vue-vben-admin-logo.webp',
   },
+  {
+    repoName: 'soybean-admin',
+    repoPath: '/soybeanjs/soybean-admin',
+    defaultStarCount: '13.3k',
+    logoUrl: '/images/soybean-admin-logo.svg',
+  }
 ];
 
 export function MoreSupportedProjects({

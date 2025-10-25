@@ -181,6 +181,13 @@ Thanks to all community projects already using our charts ❤
             <small>vue-vben-admin</small>
           </a>
         </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/soybeanjs/soybean-admin" title="soybean-admin" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/soybean-admin-logo.svg" width="80" alt="soybean-admin" style="margin-bottom: 12px;" />
+            <br/>
+            <small>soybean-admin</small>
+          </a>
+        </td>
       </tr>
     </tbody>
   </table>
