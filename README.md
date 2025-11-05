@@ -188,6 +188,20 @@ Thanks to all community projects already using our charts ❤
             <small>soybean-admin</small>
           </a>
         </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/ayangweb/BongoCat" title="BongoCat" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/BongoCat-logo.png" width="80" alt="BongoCat" style="margin-bottom: 12px;" />
+            <br/>
+            <small>BongoCat</small>
+          </a>
+        </td>
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/EcoPasteHub/EcoPaste" title="EcoPaste" style="text-decoration: none; color: inherit;">
+            <img src="./apps/web/public/images/EcoPaste-logo.png" width="80" alt="EcoPaste" style="margin-bottom: 12px;" />
+            <br/>
+            <small>EcoPaste</small>
+          </a>
+        </td>   
       </tr>
     </tbody>
   </table>
