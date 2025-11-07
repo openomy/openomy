@@ -90,6 +90,18 @@ const repoList: RepoItem[] = [
     repoPath: '/soybeanjs/soybean-admin',
     defaultStarCount: '13.3k',
     logoUrl: '/images/soybean-admin-logo.svg',
+  },
+  {
+    repoName: 'BongoCat',
+    repoPath: '/ayangweb/BongoCat',
+    defaultStarCount: '12.4k',
+    logoUrl: '/images/BongoCat-logo.png',
+  },
+  {
+    repoName: 'EcoPaste',
+    repoPath: '/EcoPasteHub/EcoPaste',
+    defaultStarCount: '6.3k',
+    logoUrl: '/images/EcoPaste-logo.png',
   }
 ];
 
