@@ -102,6 +102,12 @@ const repoList: RepoItem[] = [
     repoPath: '/EcoPasteHub/EcoPaste',
     defaultStarCount: '6.3k',
     logoUrl: '/images/EcoPaste-logo.png',
+  },
+  {
+    repoName: 'HuLa',
+    repoPath: '/HuLaSpark/HuLa',
+    defaultStarCount: '4.6k',
+    logoUrl: '/images/HuLa-logo.png',
   }
 ];
 
