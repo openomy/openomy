@@ -202,8 +202,8 @@ Thanks to all community projects already using our charts ❤
             <small>EcoPaste</small>
           </a>
         </td>
-        <td align="center" valign="top" style="width: 220px; height: 220px;">
-          <a href="https://github.com/HuLaSpark/HuLa" title="EcoPaste" style="text-decoration: none; color: inherit;">
+        <td align="center" valign="top" style="width: 140px; height: 130px;">
+          <a href="https://github.com/HuLaSpark/HuLa" title="HuLa" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/HuLa-logo.png" width="80" alt="HuLa" style="margin-bottom: 12px;" />
             <br/>
             <small>HuLa</small>
