@@ -91,8 +91,6 @@ Thanks to all community projects already using our charts ❤
             <small>AntV&nbsp;G2</small>
           </a>
         </td>
-      </tr>
-      <tr>
         <td align="center" valign="top" style="width: 140px; height: 130px;">
           <a href="https://github.com/antvis/G6" title="AntV G6" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/antvis-logo.png" width="80" alt="AntV G6" style="margin-bottom: 12px;" />
@@ -107,6 +105,8 @@ Thanks to all community projects already using our charts ❤
             <small>element-plus</small>
           </a>
         </td>
+      </tr>
+      <tr>
         <td align="center" valign="top" style="width: 140px; height: 130px;">
           <a href="https://github.com/flipped-aurora/gin-vue-admin" title="Gin Vue Admin" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/gin-vue-admin-logo.png" width="80" alt="Gin Vue Admin" style="margin-bottom: 12px;" />
@@ -128,8 +128,6 @@ Thanks to all community projects already using our charts ❤
             <small>lobe-chat</small>
           </a>
         </td>
-      </tr>
-      <tr>
         <td align="center" valign="top" style="width: 140px; height: 130px;">
           <a href="https://github.com/umijs/mako" title="Mako" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/mako.png" width="80" alt="Mako" style="margin-bottom: 12px;" />
@@ -158,6 +156,8 @@ Thanks to all community projects already using our charts ❤
             <small>tdesign-react</small>
           </a>
         </td>
+      </tr>
+      <tr>
         <td align="center" valign="top" style="width: 140px; height: 130px;">
           <a href="https://github.com/YunYouJun/valaxy" title="Valaxy" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/valaxy-logo.svg" width="80" alt="Valaxy" style="margin-bottom: 12px;" />
@@ -165,8 +165,6 @@ Thanks to all community projects already using our charts ❤
             <small>valaxy</small>
           </a>
         </td>
-      </tr>
-      <tr>
         <td align="center" valign="top" style="width: 140px; height: 130px;">
           <a href="https://github.com/element-plus-x/Element-Plus-X" title="Element-Plus-X" style="text-decoration: none; color: inherit;">
             <img src="./apps/web/public/images/vue-element-plus-x.png" width="80" alt="Element-Plus-X" style="margin-bottom: 12px;" />
