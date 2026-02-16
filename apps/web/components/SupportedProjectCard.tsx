@@ -5,7 +5,7 @@ import {
   AvatarFallback,
   AvatarImage,
 } from '@openomy/ui/components/ui/avatar';
-import type { NextFontWithVariable } from 'next/dist/compiled/@next/font/dist/types';
+import type { NextFont } from 'next/dist/compiled/@next/font';
 import { motion } from 'framer-motion';
 import { GitHubLogoIcon, StarFilledIcon } from '@radix-ui/react-icons';
 import { useGithubRepo } from '@/hooks/use-github-repo';
@@ -21,7 +21,7 @@ export const SupportedProjectCard = ({
   githubRepoName: string;
   githubRepo: string;
   defaultStars: string;
-  localFont: NextFontWithVariable;
+  localFont: NextFont;
   logoUrl: string;
 }) => {
   const { data: githubRepoData, isLoading } = useGithubRepo(githubRepo);

@@ -7,7 +7,7 @@ import {
   AvatarImage,
 } from '@openomy/ui/components/ui/avatar';
 import { GithubStarButton } from './github-star-button';
-import type { NextFontWithVariable } from 'next/dist/compiled/@next/font/dist/types';
+import type { NextFont } from 'next/dist/compiled/@next/font';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
@@ -114,7 +114,7 @@ const repoList: RepoItem[] = [
 export function MoreSupportedProjects({
   localFont,
 }: {
-  localFont: NextFontWithVariable;
+  localFont: NextFont;
 }) {
   return (
     <motion.div

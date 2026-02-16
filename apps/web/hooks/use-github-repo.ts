@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 export type GithubRepoData = {
@@ -27,8 +26,6 @@ const formatNumber = (num: number): string => {
 };
 
 export function useGithubRepo(repoPath: string) {
-  const [mounted, setMounted] = useState(false);
-
   const getDataFn = async (): Promise<GithubRepoData> => {
     const response = await fetch(`https://api.github.com/repos/${repoPath}`, {
       method: "GET",
@@ -46,16 +43,10 @@ export function useGithubRepo(repoPath: string) {
   };
 
   const githubRepoDataQuery = useQuery({
-    queryKey: ["githubRepo", repoPath, mounted],
+    queryKey: ["githubRepo", repoPath],
     queryFn: () => getDataFn(),
-    enabled: !!repoPath && mounted,
+    enabled: !!repoPath,
   });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setMounted(true);
-    }
-  }, []);
 
   return githubRepoDataQuery;
 }
