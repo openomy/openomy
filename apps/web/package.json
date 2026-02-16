@@ -8,7 +8,7 @@
     "start": "next start",
     "check-types": "tsc --noEmit",
     "gen:party-poster-bubble-template": "tsx ./scripts/generate-party-poster-templates.ts",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -27,13 +27,13 @@
     "framer-motion": "^12.5.0",
     "linkedom": "^0.18.9",
     "lucide-react": "^0.525.0",
-    "next": "15.4.1",
+    "next": "16.1.6",
     "next-themes": "^0.4.6",
     "opentype.js": "^1.3.4",
     "p-limit": "^6.2.0",
-    "react": "^19.0.0",
+    "react": "^19.2.4",
     "react-day-picker": "8.10.1",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.2.4",
     "react-hook-form": "^7.55.0",
     "sonner": "^1.7.4",
     "swiper": "^11.2.6",
@@ -42,17 +42,16 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/d3": "^7.4.3",
     "@types/node": "^20",
     "@types/opentype.js": "^1.3.8",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "@types/three": "^0.174.0",
     "dotenv": "^16.4.5",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
+    "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",
     "typescript": "^5"

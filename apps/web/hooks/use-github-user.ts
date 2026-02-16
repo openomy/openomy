@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 export type GithubUserData = {
@@ -15,8 +14,6 @@ export type GithubUserData = {
 };
 
 export function useGithubUser(username: string) {
-  const [mounted, setMounted] = useState(false);
-
   const getDataFn = async (): Promise<GithubUserData> => {
     const response = await fetch(`https://api.github.com/users/${username}`, {
       method: "GET",
@@ -31,16 +28,10 @@ export function useGithubUser(username: string) {
   };
 
   const githubUserDataQuery = useQuery({
-    queryKey: ["contributorProfile", mounted, username],
+    queryKey: ["contributorProfile", username],
     queryFn: () => getDataFn(),
-    enabled: !!username && mounted,
+    enabled: !!username,
   });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setMounted(true);
-    }
-  }, []);
 
   return githubUserDataQuery;
 }
