@@ -11,9 +11,10 @@ export async function GET(req: NextRequest) {
   const searchParams = nextReqUrl.searchParams;
 
   let svgInfo: SvgInfo | null = null;
+  const recache = searchParams.get("recache");
 
   try {
-    const { repo, chart, startDate, endDate, exclude, recache, legend } =
+    const { repo, chart, startDate, endDate, exclude, legend } =
       parseSearchParams(searchParams);
 
     let pageSize = 10;
@@ -106,10 +107,15 @@ export async function GET(req: NextRequest) {
     }
 
     // 返回 SVG
+    const cacheHeader =
+      recache === "1"
+        ? "no-store"
+        : "s-maxage=60, stale-while-revalidate=86400, stale-if-error=86400";
+
     return new Response(svgOutput, {
       headers: {
         "Content-Type": "image/svg+xml",
-        // "Cache-Control": "public, max-age=3600, s-maxage=3600",
+        "Vercel-CDN-Cache-Control": cacheHeader,
         "Access-Control-Allow-Origin": "*",
       },
     });
@@ -125,10 +131,15 @@ export async function GET(req: NextRequest) {
         const { downloadUrl } = fallbackSvgInfo;
         const svgOutput = await getCachedSvg(downloadUrl);
         // 返回 SVG
+        const fallbackCacheHeader =
+          recache === "1"
+            ? "no-store"
+            : "s-maxage=60, stale-while-revalidate=86400, stale-if-error=86400";
+
         return new Response(svgOutput, {
           headers: {
             "Content-Type": "image/svg+xml",
-            // "Cache-Control": "public, max-age=3600, s-maxage=3600",
+            "Vercel-CDN-Cache-Control": fallbackCacheHeader,
             "Access-Control-Allow-Origin": "*",
           },
         });
@@ -139,11 +150,11 @@ export async function GET(req: NextRequest) {
       console.log("用默认的错误 svg: ", error);
       // 如果缓存 svg 也失败了，则使用默认的错误 svg
       const svgOutput = generateErrorSvg();
-      // 返回 SVG
+      // 返回 200 + no-store：保持 GitHub Camo 代理兼容（非 200 会显示破图），同时防止 CDN 缓存错误 SVG
       return new Response(svgOutput, {
         headers: {
           "Content-Type": "image/svg+xml",
-          // "Cache-Control": "public, max-age=3600, s-maxage=3600",
+          "Vercel-CDN-Cache-Control": "no-store",
           "Access-Control-Allow-Origin": "*",
         },
       });
