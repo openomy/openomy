@@ -7,8 +7,6 @@
 Providing open-source economic solutions with blockchain and AI.  
 Code is no longer just behind the product — it *is* the product.
 
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/openomy/openomy?utm_source=oss&utm_medium=github&utm_campaign=openomy%2Fopenomy&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
-
 [![][vision-banner]][homepage-link]
 
 </div>
@@ -232,7 +230,7 @@ Check our GitHub Issues and Discussions to get started.
 
 ---
 
-© 2025 [Openomy][profile-link] • Licensed under [Apache 2.0](./LICENSE)
+© 2026 [Openomy][profile-link] • Licensed under [Apache 2.0](./LICENSE)
 
 [homepage-link]: https://www.openomy.com/
 [image-banner]: https://github.com/user-attachments/assets/5808d60d-74ab-4a7c-a7bd-653eca48b392
