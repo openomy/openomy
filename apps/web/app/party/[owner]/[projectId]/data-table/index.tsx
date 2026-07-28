@@ -85,6 +85,8 @@ export function PartyContributorsTable({
 
   console.log('dataQuery data:', dataQuery.data);
 
+  // TanStack Table returns functions that React Compiler cannot safely memoize.
+  // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
     data: data,
     columns,

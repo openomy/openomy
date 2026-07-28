@@ -78,6 +78,8 @@ export function ContributorPRsTable({
 
   console.log('dataQuery?.data', sorting);
 
+  // TanStack Table returns functions that React Compiler cannot safely memoize.
+  // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
     data: dataQuery?.data?.data ?? [],
     columns,

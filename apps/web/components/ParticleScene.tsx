@@ -2,7 +2,7 @@
 /* eslint-disable prefer-const */
 'use client';
 
-import { useEffect, useRef, useState, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
@@ -258,8 +258,7 @@ const ParticleScene = ({
   activeLogoId,
   onLogoHover,
   onLogoLeave,
-  // 提供默认值的配置
-  logoParticleConfig = {},
+  logoParticleConfig,
   onSendMessage,
 }: ParticleSceneProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -274,6 +273,7 @@ const ParticleScene = ({
   const [currentPosition, setCurrentPosition] = useState<number>(0);
   const [logoParticlesLoaded, setLogoParticlesLoaded] =
     useState<boolean>(false);
+  const logoParticlesLoadedRef = useRef<boolean>(false);
   const [targetCameraPosition, setTargetCameraPosition] = useState<number>(0);
   const animatingRef = useRef<boolean>(false);
   const lastScrollTimeRef = useRef<number>(0);
@@ -281,6 +281,11 @@ const ParticleScene = ({
   const cameraPositionCount = 7; // Number of camera positions for observing objects
   const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const composerRef = useRef<EffectComposer | null>(null);
+  const onLogoHoverRef = useRef(onLogoHover);
+
+  useEffect(() => {
+    onLogoHoverRef.current = onLogoHover;
+  }, [onLogoHover]);
 
   // 添加鼠标位置跟踪
   const mouseRef = useRef<THREE.Vector3>(new THREE.Vector3(0, 0, 0));
@@ -292,19 +297,21 @@ const ParticleScene = ({
   const lastMouseTimeRef = useRef<number>(0);
 
   // 合并默认配置和用户提供的配置
-  const defaultConfig: LogoParticleConfig = {
-    imageScale: 15, // 默认图片缩放
-    particleSize: 0.03, // 默认粒子大小
-    particleDensity: 10, // 默认粒子密度
-    glowIntensity: 1, // 默认发光强度
-    particleColor: '#ffffff', // 默认粒子颜色
-    particleShape: 'circle', // 默认粒子形状
-    bloomStrength: 20, // 默认bloom强度
-    bloomRadius: 0.5, // 默认bloom半径
-    bloomThreshold: 0.1, // 默认bloom阈值
-  };
-
-  const config = { ...defaultConfig, ...logoParticleConfig };
+  const config = useMemo<LogoParticleConfig>(
+    () => ({
+      imageScale: 15, // 默认图片缩放
+      particleSize: 0.03, // 默认粒子大小
+      particleDensity: 10, // 默认粒子密度
+      glowIntensity: 1, // 默认发光强度
+      particleColor: '#ffffff', // 默认粒子颜色
+      particleShape: 'circle', // 默认粒子形状
+      bloomStrength: 20, // 默认bloom强度
+      bloomRadius: 0.5, // 默认bloom半径
+      bloomThreshold: 0.1, // 默认bloom阈值
+      ...logoParticleConfig,
+    }),
+    [logoParticleConfig],
+  );
 
   // 定义固定的相机位置
   const cameraPositions = useMemo(() => {
@@ -388,7 +395,7 @@ const ParticleScene = ({
   >(new Map());
 
   // 创建基于Logo的粒子系统
-  const createLogoParticles = async () => {
+  const createLogoParticles = useCallback(async () => {
     if (!sceneRef.current) return [];
 
     const logoParticlesSystems: THREE.Points[] = [];
@@ -791,23 +798,24 @@ const ParticleScene = ({
 
       // Trigger hover event for the first logo
       setTimeout(() => {
-        onLogoHover(logoId);
+        onLogoHoverRef.current(logoId);
       }, 100);
     }
 
     return logoParticlesSystems;
-  };
+  }, [cameraPositions, config, logos]);
 
   // 初始化 Three.js
   useEffect(() => {
-    if (!containerRef.current) return;
+    const container = containerRef.current;
+    if (!container) return;
 
     // 清除之前的渲染器
     if (
       rendererRef.current &&
-      containerRef.current.contains(rendererRef.current.domElement)
+      container.contains(rendererRef.current.domElement)
     ) {
-      containerRef.current.removeChild(rendererRef.current.domElement);
+      container.removeChild(rendererRef.current.domElement);
     }
 
     // 创建场景
@@ -830,7 +838,7 @@ const ParticleScene = ({
     renderer.setClearColor(0x000000);
     renderer.toneMapping = THREE.ACESFilmicToneMapping; // 添加色调映射以增强视觉效果
     renderer.toneMappingExposure = 1.0; // 调整曝光
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // 创建效果合成器
@@ -1204,6 +1212,7 @@ const ParticleScene = ({
         logoParticlesRef.current = logoParticles;
 
         // Set loaded state
+        logoParticlesLoadedRef.current = true;
         setLogoParticlesLoaded(true);
 
         // Find the logo closest to the camera
@@ -1277,7 +1286,7 @@ const ParticleScene = ({
           });
 
           // Trigger hover event for the closest logo
-          onLogoHover(closestLogoId);
+          onLogoHoverRef.current(closestLogoId);
         }
       } catch (error) {
         console.error('Error loading logo particles:', error);
@@ -2327,7 +2336,7 @@ const ParticleScene = ({
 
         // 如果这个logo是激活的，触发悬停事件
         if (isActive && !isCameraMoving) {
-          onLogoHover(logoId);
+          onLogoHoverRef.current(logoId);
         }
       });
 
@@ -2380,7 +2389,7 @@ const ParticleScene = ({
       }
 
       // 更新 logo 粒子
-      if (logoParticlesLoaded) {
+      if (logoParticlesLoadedRef.current) {
         // 找到距离相机最近的 logo
         let closestLogo: THREE.Points | null = null;
         let minDistance = Infinity;
@@ -2449,9 +2458,14 @@ const ParticleScene = ({
         cancelAnimationFrame(animationFrameRef.current);
       }
 
-      if (rendererRef.current && containerRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      if (
+        rendererRef.current &&
+        container.contains(rendererRef.current.domElement)
+      ) {
+        container.removeChild(rendererRef.current.domElement);
       }
+
+      logoParticlesLoadedRef.current = false;
 
       // 清理粒子系统
       if (backgroundParticlesRef.current) {
@@ -2494,7 +2508,13 @@ const ParticleScene = ({
 
       controls.dispose();
     };
-  }, [logos, cameraPositions, targetCameraPosition]); // 添加 cameraPositions 作为依赖项
+  }, [
+    cameraPositions,
+    config,
+    createLogoParticles,
+    logos,
+    targetCameraPosition,
+  ]);
 
   // 替换为一个只在组件初始化时运行一次的效果
   useEffect(() => {
@@ -2504,7 +2524,7 @@ const ParticleScene = ({
       setCurrentPosition(0);
       setTargetCameraPosition(0);
     }
-  }, []); // 空依赖数组确保只运行一次
+  }, [cameraPositions]);
 
   // 处理相机动画
   useEffect(() => {
@@ -2612,7 +2632,7 @@ const ParticleScene = ({
         animationTimeoutRef.current = null;
       }
     };
-  }, [targetCameraPosition]);
+  }, [cameraPositions, targetCameraPosition]);
 
   // 在组件顶部添加新的状态
   const [showFirstPositionUI, setShowFirstPositionUI] = useState<boolean>(true);
@@ -2831,7 +2851,7 @@ const ParticleScene = ({
     return () => {
       clearInterval(checkInterval);
     };
-  }, [targetCameraPosition]);
+  }, [cameraPositions, targetCameraPosition]);
 
   // 将 mouseInLogoRangeRef 和 lastMousePositionRef 移到组件顶层
   const mouseInLogoRangeRef = useRef<boolean>(false);
@@ -2841,7 +2861,8 @@ const ParticleScene = ({
 
   // 添加鼠标事件处理
   useEffect(() => {
-    if (!containerRef.current || !cameraRef.current) return;
+    const container = containerRef.current;
+    if (!container || !cameraRef.current) return;
 
     // 创建一个平面，用于计算鼠标在3D空间中的位置
     const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
@@ -2851,7 +2872,7 @@ const ParticleScene = ({
 
     const handleMouseMove = (event: MouseEvent) => {
       // 计算归一化的设备坐标
-      const rect = containerRef.current!.getBoundingClientRect();
+      const rect = container.getBoundingClientRect();
       mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
 
@@ -2965,17 +2986,12 @@ const ParticleScene = ({
       });
     };
 
-    containerRef.current.addEventListener('mousemove', handleMouseMove);
-    containerRef.current.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener('mousemove', handleMouseMove);
-        containerRef.current.removeEventListener(
-          'mouseleave',
-          handleMouseLeave,
-        );
-      }
+      container.removeEventListener('mousemove', handleMouseMove);
+      container.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 

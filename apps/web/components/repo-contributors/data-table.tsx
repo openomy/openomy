@@ -92,6 +92,8 @@ export const RepoContributorsDataTable = forwardRef<
     placeholderData: keepPreviousData, // don't have 0 rows flash while changing pages/loading next page
   });
 
+  // TanStack Table returns functions that React Compiler cannot safely memoize.
+  // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
     data: dataQuery?.data?.data ?? [],
     columns: buildColumns({ owner, repo, enableUserDetail }),
