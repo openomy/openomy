@@ -97,6 +97,32 @@
         "electron",
         "desktop"
       ]
+    },
+    {
+      "id": "firstpass",
+      "productName": "FirstPass",
+      "label": "Launch QA",
+      "description": "Evidence-checked homepage-to-signup reviews and clean-environment release checks for newly launched SaaS and developer tools.",
+      "image": {
+        "src": "https://mmxfq.github.io/firstpass-site/firstpass-social.png",
+        "alt": "FirstPass homepage-to-signup conversion teardown"
+      },
+      "category": "developer-tools",
+      "links": {
+        "website": "https://mmxfq.github.io/firstpass-site/",
+        "github": "https://github.com/Mmxfq/firstpass-site"
+      },
+      "contributor": {
+        "githubUsername": "mmxfq",
+        "addedDate": "2026-10-08"
+      },
+      "tags": [
+        "saas",
+        "launch-qa",
+        "conversion",
+        "release-testing",
+        "developer-tools"
+      ]
     }
   ]
 }
